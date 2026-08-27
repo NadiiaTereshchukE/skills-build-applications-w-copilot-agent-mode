@@ -1,0 +1,2 @@
+import ResourceTable from './ResourceTable.jsx'
+export default function Workouts() { return <ResourceTable resource="workouts" title="Workouts" description="Suggested sessions to keep your next effort focused." columns={[["name", "Workout"], ["category", "Category"], ["difficulty", "Difficulty"], ["duration", "Duration"]]} /> }

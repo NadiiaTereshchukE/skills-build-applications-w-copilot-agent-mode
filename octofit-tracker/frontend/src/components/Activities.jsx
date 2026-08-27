@@ -1,0 +1,2 @@
+import ResourceTable from './ResourceTable.jsx'
+export default function Activities() { return <ResourceTable resource="activities" title="Activity feed" description="Recent movement across your Octofit community." columns={[["userId", "Athlete"], ["type", "Activity"], ["duration", "Duration"], ["calories", "Calories"]]} /> }
