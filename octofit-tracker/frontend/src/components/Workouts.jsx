@@ -1,0 +1,3 @@
+import ResourceTable from './ResourceTable.jsx'
+const endpoint = import.meta.env.VITE_CODESPACE_NAME?.trim() ? `https://${import.meta.env.VITE_CODESPACE_NAME}-8000.app.github.dev/api/workouts/` : 'http://localhost:8000/api/workouts/'
+export default function Workouts() { return <ResourceTable resource="workouts" endpoint={endpoint} title="Workouts" description="Suggested sessions to keep your next effort focused." columns={[["title", "Workout"], ["targetActivity", "Activity"], ["difficulty", "Difficulty"], ["durationMinutes", "Duration (min)"]]} /> }
