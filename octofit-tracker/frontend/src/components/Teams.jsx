@@ -1,2 +1,3 @@
 import ResourceTable from './ResourceTable.jsx'
-export default function Teams() { return <ResourceTable resource="teams" title="Teams" description="Your squads, their captains, and collective momentum." columns={[["name", "Team"], ["description", "Description"], ["memberIds", "Members"]]} /> }
+const endpoint = import.meta.env.VITE_CODESPACE_NAME?.trim() ? `https://${import.meta.env.VITE_CODESPACE_NAME}-8000.app.github.dev/api/teams/` : 'http://localhost:8000/api/teams/'
+export default function Teams() { return <ResourceTable resource="teams" endpoint={endpoint} title="Teams" description="Your squads, their captains, and collective momentum." columns={[["name", "Team"], ["description", "Description"], ["memberIds", "Members"]]} /> }

@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react'
 import { getResource } from '../api.js'
 
-export default function ResourceTable({ resource, title, description, columns }) {
+export default function ResourceTable({ resource, endpoint, title, description, columns }) {
   const [items, setItems] = useState([])
   const [error, setError] = useState('')
 
   useEffect(() => {
-    getResource(resource).then(setItems).catch((requestError) => setError(requestError.message))
-  }, [resource])
+    getResource(resource, endpoint).then(setItems).catch((requestError) => setError(requestError.message))
+  }, [endpoint, resource])
 
   return <section>
     <div className="page-heading"><div><p className="eyebrow">Octofit / {resource}</p><h1>{title}</h1><p className="subtitle">{description}</p></div><span className="count-badge">{items.length} records</span></div>

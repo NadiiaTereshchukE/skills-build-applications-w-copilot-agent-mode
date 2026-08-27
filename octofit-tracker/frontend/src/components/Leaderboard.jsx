@@ -1,2 +1,3 @@
 import ResourceTable from './ResourceTable.jsx'
-export default function Leaderboard() { return <ResourceTable resource="leaderboard" title="Leaderboard" description="See who is setting the pace this week." columns={[["rank", "Rank"], ["userId", "Athlete"], ["points", "Points"], ["period", "Period"]]} /> }
+const endpoint = import.meta.env.VITE_CODESPACE_NAME?.trim() ? `https://${import.meta.env.VITE_CODESPACE_NAME}-8000.app.github.dev/api/leaderboard/` : 'http://localhost:8000/api/leaderboard/'
+export default function Leaderboard() { return <ResourceTable resource="leaderboard" endpoint={endpoint} title="Leaderboard" description="See who is setting the pace this week." columns={[["rank", "Rank"], ["userId", "Athlete"], ["points", "Points"], ["period", "Period"]]} /> }

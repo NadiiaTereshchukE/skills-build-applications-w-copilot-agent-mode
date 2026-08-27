@@ -1,2 +1,3 @@
 import ResourceTable from './ResourceTable.jsx'
-export default function Users() { return <ResourceTable resource="users" title="Athletes" description="A directory of everyone training with Octofit." columns={[["username", "Username"], ["displayName", "Name"], ["email", "Email"], ["teamId", "Team"]]} /> }
+const endpoint = import.meta.env.VITE_CODESPACE_NAME?.trim() ? `https://${import.meta.env.VITE_CODESPACE_NAME}-8000.app.github.dev/api/users/` : 'http://localhost:8000/api/users/'
+export default function Users() { return <ResourceTable resource="users" endpoint={endpoint} title="Athletes" description="A directory of everyone training with Octofit." columns={[["username", "Username"], ["displayName", "Name"], ["email", "Email"], ["teamId", "Team"]]} /> }
