@@ -1,2 +1,2 @@
 import ResourceTable from './ResourceTable.jsx'
-export default function Users() { return <ResourceTable resource="users" title="Athletes" description="A directory of everyone training with Octofit." columns={[["name", "Name"], ["email", "Email"], ["team", "Team"], ["level", "Level"]]} /> }
+export default function Users() { return <ResourceTable resource="users" title="Athletes" description="A directory of everyone training with Octofit." columns={[["username", "Username"], ["displayName", "Name"], ["email", "Email"], ["teamId", "Team"]]} /> }

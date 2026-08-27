@@ -1,2 +1,2 @@
 import ResourceTable from './ResourceTable.jsx'
-export default function Leaderboard() { return <ResourceTable resource="leaderboard" title="Leaderboard" description="See who is setting the pace this week." columns={[["rank", "Rank"], ["userId", "Athlete"], ["points", "Points"], ["streak", "Streak"]]} /> }
+export default function Leaderboard() { return <ResourceTable resource="leaderboard" title="Leaderboard" description="See who is setting the pace this week." columns={[["rank", "Rank"], ["userId", "Athlete"], ["points", "Points"], ["period", "Period"]]} /> }

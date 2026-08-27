@@ -1,2 +1,2 @@
 import ResourceTable from './ResourceTable.jsx'
-export default function Teams() { return <ResourceTable resource="teams" title="Teams" description="Your squads, their captains, and collective momentum." columns={[["name", "Team"], ["captain", "Captain"], ["members", "Members"], ["points", "Points"]]} /> }
+export default function Teams() { return <ResourceTable resource="teams" title="Teams" description="Your squads, their captains, and collective momentum." columns={[["name", "Team"], ["description", "Description"], ["memberIds", "Members"]]} /> }

@@ -10,8 +10,9 @@ VITE_CODESPACE_NAME=your-codespace-name
 ```
 
 The frontend uses `https://${VITE_CODESPACE_NAME}-8000.app.github.dev/api/` for
-resource requests. If the variable is unset, the app shows a configuration
-warning and does not request an invalid `https://undefined-8000...` URL.
+Codespaces resource requests. If the variable is unset, it falls back to
+`http://localhost:8000/api/` for local development rather than requesting an
+invalid `https://undefined-8000...` URL.
 
 This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
